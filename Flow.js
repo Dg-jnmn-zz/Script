@@ -40,7 +40,7 @@ async function fetchInfo(sub) {
         const subkey = Object.keys(headers).filter(k => /SUBSCRIPTION-USERINFO/i.test(k))[0];
         const userinfo = headers[subkey];
         if (!userinfo) {
-            $.notify(`🚀 [ ${sub.name}机场]`, `❌${sub.name}未提供流量信息！`);
+            $.notify(`❌ [${sub.name}机场]   未提供流量信息！`);
         }
         const KEY_o_now = "o_now" + sub.name;
         const KEY_today_flow = "today_flow" + sub.name;
